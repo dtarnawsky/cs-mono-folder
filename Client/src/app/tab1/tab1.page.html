@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Scroll Snapping Example
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Scroll Snapping Example</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="slide-bullets">
+    <div *ngFor="let card of cards; index as i" [ngClass]="i === lastIndex ? 'slide-bullet-active' :'slide-bullet'"></div>
+  </div>
+  <div class="container" (scroll)="onScroll($event)">
+    <div class="card" *ngFor="let card of cards"  (click)="open(card)">{{card}}</div>
+  </div>
+</ion-content>

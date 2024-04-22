@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "cs-scroll-snap",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
